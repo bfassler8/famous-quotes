@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "category": "Inspiration",
+    "tags": ["work", "passion", "excellence"]
+  },
+  {
+    "id": 2,
+    "quote": "In the middle of difficulty lies opportunity.",
+    "author": "Albert Einstein",
+    "category": "Science",
+    "tags": ["adversity", "opportunity", "mindset"]
+  },
+  {
+    "id": 3,
+    "quote": "Be yourself; everyone else is already taken.",
+    "author": "Oscar Wilde",
+    "category": "Humor",
+    "tags": ["individuality", "authenticity", "identity"]
+  },
+  {
+    "id": 4,
+    "quote": "You will face many defeats in life, but never let yourself be defeated.",
+    "author": "Maya Angelou",
+    "category": "Inspiration",
+    "tags": ["resilience", "courage", "perseverance"]
+  },
+  {
+    "id": 5,
+    "quote": "The unexamined life is not worth living.",
+    "author": "Socrates",
+    "category": "Philosophy",
+    "tags": ["self-reflection", "truth", "wisdom"]
+  },
+  {
+    "id": 6,
+    "quote": "Knowing yourself is the beginning of all wisdom.",
+    "author": "Aristotle",
+    "category": "Philosophy",
+    "tags": ["wisdom", "self-awareness", "knowledge"]
+  },
+  {
+    "id": 7,
+    "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    "author": "Nelson Mandela",
+    "category": "Leadership",
+    "tags": ["resilience", "courage", "strength"]
+  },
+  {
+    "id": 8,
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "author": "Eleanor Roosevelt",
+    "category": "Inspiration",
+    "tags": ["dreams", "future", "hope"]
+  },
+  {
+    "id": 9,
+    "quote": "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world.",
+    "author": "Albert Einstein",
+    "category": "Science",
+    "tags": ["creativity", "imagination", "thinking"]
+  },
+  {
+    "id": 10,
+    "quote": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "category": "Wisdom",
+    "tags": ["patience", "persistence", "progress"]
+  },
+  {
+    "id": 11,
+    "quote": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "category": "Wisdom",
+    "tags": ["action", "beginning", "perseverance"]
+  },
+  {
+    "id": 12,
+    "quote": "Whenever you find yourself on the side of the majority, it is time to pause and reflect.",
+    "author": "Mark Twain",
+    "category": "Humor",
+    "tags": ["conformity", "critical thinking", "reflection"]
+  },
+  {
+    "id": 13,
+    "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "category": "Leadership",
+    "tags": ["courage", "success", "failure"]
+  },
+  {
+    "id": 14,
+    "quote": "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
+    "author": "Martin Luther King Jr.",
+    "category": "Inspiration",
+    "tags": ["love", "peace", "justice"]
+  },
+  {
+    "id": 15,
+    "quote": "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+    "author": "Ralph Waldo Emerson",
+    "category": "Leadership",
+    "tags": ["originality", "pioneering", "courage"]
+  },
+  {
+    "id": 16,
+    "quote": "He who has a why to live can bear almost any how.",
+    "author": "Friedrich Nietzsche",
+    "category": "Philosophy",
+    "tags": ["purpose", "resilience", "meaning"]
+  },
+  {
+    "id": 17,
+    "quote": "The best way to predict the future is to invent it.",
+    "author": "Alan Kay",
+    "category": "Science",
+    "tags": ["innovation", "technology", "future"]
+  },
+  {
+    "id": 18,
+    "quote": "All our dreams can come true, if we have the courage to pursue them.",
+    "author": "Walt Disney",
+    "category": "Inspiration",
+    "tags": ["dreams", "courage", "ambition"]
+  },
+  {
+    "id": 19,
+    "quote": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas Edison",
+    "category": "Science",
+    "tags": ["failure", "invention", "persistence"]
+  },
+  {
+    "id": 20,
+    "quote": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "category": "Life",
+    "tags": ["destiny", "presence", "mindfulness"]
+  },
+  {
+    "id": 21,
+    "quote": "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    "author": "Mother Teresa",
+    "category": "Inspiration",
+    "tags": ["kindness", "love", "compassion"]
+  },
+  {
+    "id": 22,
+    "quote": "In three words I can sum up everything I've learned about life: it goes on.",
+    "author": "Robert Frost",
+    "category": "Life",
+    "tags": ["perspective", "time", "acceptance"]
+  },
+  {
+    "id": 23,
+    "quote": "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
+    "author": "Marie Curie",
+    "category": "Science",
+    "tags": ["fear", "understanding", "curiosity"]
+  },
+  {
+    "id": 24,
+    "quote": "Happiness depends upon ourselves.",
+    "author": "Aristotle",
+    "category": "Philosophy",
+    "tags": ["happiness", "agency", "mind"]
+  },
+  {
+    "id": 25,
+    "quote": "The only true wisdom is in knowing you know nothing.",
+    "author": "Socrates",
+    "category": "Wisdom",
+    "tags": ["humility", "knowledge", "learning"]
+  },
+  {
+    "id": 26,
+    "quote": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt",
+    "category": "Inspiration",
+    "tags": ["belief", "confidence", "success"]
+  },
+  {
+    "id": 27,
+    "quote": "Simplicity is the ultimate sophistication.",
+    "author": "Leonardo da Vinci",
+    "category": "Art",
+    "tags": ["simplicity", "design", "elegance"]
+  },
+  {
+    "id": 28,
+    "quote": "I think, therefore I am.",
+    "author": "René Descartes",
+    "category": "Philosophy",
+    "tags": ["existence", "thought", "consciousness"]
+  },
+  {
+    "id": 29,
+    "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "author": "Will Durant",
+    "category": "Wisdom",
+    "tags": ["habits", "excellence", "discipline"]
+  },
+  {
+    "id": 30,
+    "quote": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "author": "Mahatma Gandhi",
+    "category": "Wisdom",
+    "tags": ["learning", "living", "growth"]
+  },
+  {
+    "id": 31,
+    "quote": "It always seems impossible until it's done.",
+    "author": "Nelson Mandela",
+    "category": "Leadership",
+    "tags": ["determination", "impossibility", "achievement"]
+  },
+  {
+    "id": 32,
+    "quote": "Stay hungry, stay foolish.",
+    "author": "Steve Jobs",
+    "category": "Inspiration",
+    "tags": ["curiosity", "adventure", "ambition"]
+  },
+  {
+    "id": 33,
+    "quote": "Do what you can, with what you have, where you are.",
+    "author": "Theodore Roosevelt",
+    "category": "Inspiration",
+    "tags": ["resourcefulness", "action", "pragmatism"]
+  },
+  {
+    "id": 34,
+    "quote": "If you cannot do great things, do small things in a great way.",
+    "author": "Napoleon Hill",
+    "category": "Success",
+    "tags": ["care", "excellence", "dedication"]
+  },
+  {
+    "id": 35,
+    "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "author": "Ralph Waldo Emerson",
+    "category": "Philosophy",
+    "tags": ["individuality", "authenticity", "integrity"]
+  },
+  {
+    "id": 36,
+    "quote": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    "author": "Albert Einstein",
+    "category": "Humor",
+    "tags": ["wit", "universe", "human nature"]
+  },
+  {
+    "id": 37,
+    "quote": "Education is the most powerful weapon which you can use to change the world.",
+    "author": "Nelson Mandela",
+    "category": "Leadership",
+    "tags": ["education", "change", "empowerment"]
+  },
+  {
+    "id": 38,
+    "quote": "The mind is everything. What you think you become.",
+    "author": "Buddha",
+    "category": "Wisdom",
+    "tags": ["mind", "thoughts", "transformation"]
+  },
+  {
+    "id": 39,
+    "quote": "Not all those who wander are lost.",
+    "author": "J.R.R. Tolkien",
+    "category": "Literature",
+    "tags": ["exploration", "adventure", "purpose"]
+  },
+  {
+    "id": 40,
+    "quote": "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+    "author": "Benjamin Franklin",
+    "category": "Wisdom",
+    "tags": ["learning", "teaching", "engagement"]
+  },
+  {
+    "id": 41,
+    "quote": "You miss 100% of the shots you don't take.",
+    "author": "Wayne Gretzky",
+    "category": "Success",
+    "tags": ["opportunity", "risk", "action"]
+  },
+  {
+    "id": 42,
+    "quote": "Whether you think you can or you think you can't, you're right.",
+    "author": "Henry Ford",
+    "category": "Success",
+    "tags": ["mindset", "attitude", "belief"]
+  },
+  {
+    "id": 43,
+    "quote": "I have learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+    "author": "Maya Angelou",
+    "category": "Wisdom",
+    "tags": ["empathy", "connection", "kindness"]
+  },
+  {
+    "id": 44,
+    "quote": "A room without books is like a body without a soul.",
+    "author": "Marcus Tullius Cicero",
+    "category": "Literature",
+    "tags": ["books", "reading", "knowledge"]
+  },
+  {
+    "id": 45,
+    "quote": "Courage is resistance to fear, mastery of fear - not absence of fear.",
+    "author": "Mark Twain",
+    "category": "Wisdom",
+    "tags": ["courage", "fear", "bravery"]
+  },
+  {
+    "id": 46,
+    "quote": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain",
+    "category": "Success",
+    "tags": ["initiative", "action", "starting"]
+  },
+  {
+    "id": 47,
+    "quote": "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
+    "author": "Albert Einstein",
+    "category": "Philosophy",
+    "tags": ["wonder", "gratitude", "perspective"]
+  },
+  {
+    "id": 48,
+    "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+    "author": "Ralph Waldo Emerson",
+    "category": "Inspiration",
+    "tags": ["inner strength", "potential", "resilience"]
+  },
+  {
+    "id": 49,
+    "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+    "author": "Thomas Edison",
+    "category": "Success",
+    "tags": ["hard work", "effort", "genius"]
+  },
+  {
+    "id": 50,
+    "quote": "Be the change that you wish to see in the world.",
+    "author": "Mahatma Gandhi",
+    "category": "Leadership",
+    "tags": ["example", "leadership", "transformation"]
+  },
+  {
+    "id": 51,
+    "quote": "If you want to live a happy life, tie it to a goal, not to people or things.",
+    "author": "Albert Einstein",
+    "category": "Life",
+    "tags": ["purpose", "goals", "happiness"]
+  },
+  {
+    "id": 52,
+    "quote": "The only impossible journey is the one you never begin.",
+    "author": "Tony Robbins",
+    "category": "Inspiration",
+    "tags": ["action", "beginning", "potential"]
+  },
+  {
+    "id": 53,
+    "quote": "Act as if what you do makes a difference. It does.",
+    "author": "William James",
+    "category": "Inspiration",
+    "tags": ["impact", "purpose", "meaning"]
+  },
+  {
+    "id": 54,
+    "quote": "Never let the fear of striking out keep you from playing the game.",
+    "author": "Babe Ruth",
+    "category": "Success",
+    "tags": ["courage", "fear", "trying"]
+  },
+  {
+    "id": 55,
+    "quote": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau",
+    "category": "Success",
+    "tags": ["focus", "dedication", "work"]
+  },
+  {
+    "id": 56,
+    "quote": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+    "author": "Buddha",
+    "category": "Wisdom",
+    "tags": ["mindfulness", "present", "peace"]
+  },
+  {
+    "id": 57,
+    "quote": "An unexamined life is a missed opportunity for discovering who you really are.",
+    "author": "Plato",
+    "category": "Philosophy",
+    "tags": ["discovery", "introspection", "truth"]
+  },
+  {
+    "id": 58,
+    "quote": "We don't see things as they are, we see them as we are.",
+    "author": "Anaïs Nin",
+    "category": "Philosophy",
+    "tags": ["perception", "subjectivity", "awareness"]
+  },
+  {
+    "id": 59,
+    "quote": "The power of imagination makes us infinite.",
+    "author": "John Muir",
+    "category": "Inspiration",
+    "tags": ["imagination", "nature", "boundless"]
+  },
+  {
+    "id": 60,
+    "quote": "Life is really simple, but we insist on making it complicated.",
+    "author": "Confucius",
+    "category": "Wisdom",
+    "tags": ["simplicity", "clarity", "life"]
+  },
+  {
+    "id": 61,
+    "quote": "If you tell the truth, you don't have to remember anything.",
+    "author": "Mark Twain",
+    "category": "Humor",
+    "tags": ["honesty", "truth", "wit"]
+  },
+  {
+    "id": 62,
+    "quote": "Try not to become a man of success, but rather try to become a man of value.",
+    "author": "Albert Einstein",
+    "category": "Success",
+    "tags": ["value", "character", "integrity"]
+  },
+  {
+    "id": 63,
+    "quote": "I would rather die of passion than of boredom.",
+    "author": "Vincent van Gogh",
+    "category": "Art",
+    "tags": ["passion", "art", "intensity"]
+  },
+  {
+    "id": 64,
+    "quote": "Art washes away from the soul the dust of everyday life.",
+    "author": "Pablo Picasso",
+    "category": "Art",
+    "tags": ["art", "soul", "creativity"]
+  },
+  {
+    "id": 65,
+    "quote": "Everything you can imagine is real.",
+    "author": "Pablo Picasso",
+    "category": "Art",
+    "tags": ["imagination", "creativity", "art"]
+  },
+  {
+    "id": 66,
+    "quote": "Great things are done by a series of small things brought together.",
+    "author": "Vincent van Gogh",
+    "category": "Art",
+    "tags": ["persistence", "detail", "greatness"]
+  },
+  {
+    "id": 67,
+    "quote": "Science is a way of thinking much more than it is a body of knowledge.",
+    "author": "Carl Sagan",
+    "category": "Science",
+    "tags": ["curiosity", "inquiry", "skepticism"]
+  },
+  {
+    "id": 68,
+    "quote": "Somewhere, something incredible is waiting to be known.",
+    "author": "Carl Sagan",
+    "category": "Science",
+    "tags": ["discovery", "wonder", "cosmos"]
+  },
+  {
+    "id": 69,
+    "quote": "Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.",
+    "author": "Stephen Hawking",
+    "category": "Science",
+    "tags": ["curiosity", "universe", "wonder"]
+  },
+  {
+    "id": 70,
+    "quote": "Intelligence is the ability to adapt to change.",
+    "author": "Stephen Hawking",
+    "category": "Science",
+    "tags": ["intelligence", "adaptation", "change"]
+  },
+  {
+    "id": 71,
+    "quote": "If I have seen further, it is by standing on the shoulders of giants.",
+    "author": "Isaac Newton",
+    "category": "Science",
+    "tags": ["humility", "knowledge", "progress"]
+  },
+  {
+    "id": 72,
+    "quote": "Defeat is not bitter unless you swallow it.",
+    "author": "Bruce Lee",
+    "category": "Wisdom",
+    "tags": ["mindset", "resilience", "defeat"]
+  },
+  {
+    "id": 73,
+    "quote": "Empty your mind, be formless, shapeless, like water.",
+    "author": "Bruce Lee",
+    "category": "Philosophy",
+    "tags": ["adaptability", "focus", "flow"]
+  },
+  {
+    "id": 74,
+    "quote": "Knowing is not enough, we must apply. Willing is not enough, we must do.",
+    "author": "Johann Wolfgang von Goethe",
+    "category": "Wisdom",
+    "tags": ["action", "execution", "knowledge"]
+  },
+  {
+    "id": 75,
+    "quote": "There is nothing either good or bad, but thinking makes it so.",
+    "author": "William Shakespeare",
+    "category": "Literature",
+    "tags": ["perception", "thought", "mind"]
+  },
+  {
+    "id": 76,
+    "quote": "We know what we are, but know not what we may be.",
+    "author": "William Shakespeare",
+    "category": "Literature",
+    "tags": ["potential", "mystery", "self"]
+  },
+  {
+    "id": 77,
+    "quote": "A person who never made a mistake never tried anything new.",
+    "author": "Albert Einstein",
+    "category": "Science",
+    "tags": ["mistakes", "learning", "innovation"]
+  },
+  {
+    "id": 78,
+    "quote": "To cultivate kindness is a valuable part of the business of life.",
+    "author": "Samuel Johnson",
+    "category": "Life",
+    "tags": ["kindness", "decency", "goodness"]
+  },
+  {
+    "id": 79,
+    "quote": "Turn your wounds into wisdom.",
+    "author": "Oprah Winfrey",
+    "category": "Inspiration",
+    "tags": ["resilience", "healing", "growth"]
+  },
+  {
+    "id": 80,
+    "quote": "The purpose of our lives is to be happy.",
+    "author": "Dalai Lama",
+    "category": "Life",
+    "tags": ["happiness", "purpose", "peace"]
+  },
+  {
+    "id": 81,
+    "quote": "Happiness is not something ready made. It comes from your own actions.",
+    "author": "Dalai Lama",
+    "category": "Wisdom",
+    "tags": ["happiness", "deeds", "responsibility"]
+  },
+  {
+    "id": 82,
+    "quote": "Even the darkest night will end and the sun will rise.",
+    "author": "Victor Hugo",
+    "category": "Literature",
+    "tags": ["hope", "light", "dawn"]
+  },
+  {
+    "id": 83,
+    "quote": "To love another person is to see the face of God.",
+    "author": "Victor Hugo",
+    "category": "Literature",
+    "tags": ["love", "transcendence", "humanity"]
+  },
+  {
+    "id": 84,
+    "quote": "It is never too late to be what you might have been.",
+    "author": "George Eliot",
+    "category": "Inspiration",
+    "tags": ["potential", "timing", "reinvention"]
+  },
+  {
+    "id": 85,
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt",
+    "category": "Leadership",
+    "tags": ["doubt", "confidence", "future"]
+  },
+  {
+    "id": 86,
+    "quote": "A leader is one who knows the way, goes the way, and shows the way.",
+    "author": "John C. Maxwell",
+    "category": "Leadership",
+    "tags": ["leadership", "example", "guidance"]
+  },
+  {
+    "id": 87,
+    "quote": "I attribute my success to this: I never gave or took any excuse.",
+    "author": "Florence Nightingale",
+    "category": "Success",
+    "tags": ["accountability", "discipline", "resolve"]
+  },
+  {
+    "id": 88,
+    "quote": "Whatever you are, be a good one.",
+    "author": "Abraham Lincoln",
+    "category": "Wisdom",
+    "tags": ["character", "integrity", "excellence"]
+  },
+  {
+    "id": 89,
+    "quote": "Leave nothing for tomorrow which can be done today.",
+    "author": "Abraham Lincoln",
+    "category": "Wisdom",
+    "tags": ["procrastination", "diligence", "duty"]
+  },
+  {
+    "id": 90,
+    "quote": "The future depends on what you do today.",
+    "author": "Mahatma Gandhi",
+    "category": "Leadership",
+    "tags": ["present", "impact", "destiny"]
+  },
+  {
+    "id": 91,
+    "quote": "You can never get a cup of tea large enough or a book long enough to suit me.",
+    "author": "C.S. Lewis",
+    "category": "Literature",
+    "tags": ["reading", "books", "comfort"]
+  },
+  {
+    "id": 92,
+    "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "author": "C.S. Lewis",
+    "category": "Inspiration",
+    "tags": ["adversity", "destiny", "courage"]
+  },
+  {
+    "id": 93,
+    "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "category": "Inspiration",
+    "tags": ["optimism", "sunshine", "hope"]
+  },
+  {
+    "id": 94,
+    "quote": "What we think, we become.",
+    "author": "Buddha",
+    "category": "Philosophy",
+    "tags": ["mind", "reality", "creation"]
+  },
+  {
+    "id": 95,
+    "quote": "Change your thoughts and you change your world.",
+    "author": "Norman Vincent Peale",
+    "category": "Inspiration",
+    "tags": ["perspective", "mindset", "positive"]
+  },
+  {
+    "id": 96,
+    "quote": "The question isn't who is going to let me; it's who is going to stop me.",
+    "author": "Ayn Rand",
+    "category": "Success",
+    "tags": ["confidence", "ambition", "independence"]
+  },
+  {
+    "id": 97,
+    "quote": "Life is either a daring adventure or nothing at all.",
+    "author": "Helen Keller",
+    "category": "Life",
+    "tags": ["adventure", "courage", "risk"]
+  },
+  {
+    "id": 98,
+    "quote": "The most beautiful things in the world cannot be seen or even touched, they must be felt with the heart.",
+    "author": "Helen Keller",
+    "category": "Inspiration",
+    "tags": ["beauty", "heart", "feeling"]
+  },
+  {
+    "id": 99,
+    "quote": "The man who does not read has no advantage over the man who cannot read.",
+    "author": "Mark Twain",
+    "category": "Literature",
+    "tags": ["reading", "literacy", "wisdom"]
+  },
+  {
+    "id": 100,
+    "quote": "Peace begins with a smile.",
+    "author": "Mother Teresa",
+    "category": "Wisdom",
+    "tags": ["peace", "smile", "kindness"]
+  }
+]
