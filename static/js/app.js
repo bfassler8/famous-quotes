@@ -1,13 +1,50 @@
 /**
  * QuoteVault — Plain Vanilla JavaScript Application
- * Manages fetching, searching, filtering, animations, and clipboard interactions.
+ * Manages fetching, searching, filtering, CSV export, theme toggling, animations, and clipboard interactions.
  */
 
 (function () {
   'use strict';
 
+  // CSS Root Variables for Light and Dark modes
+  const THEME_ROOT_VARIABLES = {
+    light: {
+      '--bg-primary': '#f8fafc',
+      '--bg-surface': '#ffffff',
+      '--bg-surface-elevated': '#ffffff',
+      '--bg-secondary': '#f1f5f9',
+      '--bg-tertiary': '#e2e8f0',
+      '--text-primary': '#0f172a',
+      '--text-secondary': '#475569',
+      '--text-muted': '#64748b',
+      '--border-subtle': '#e2e8f0',
+      '--border-focus': '#818cf8',
+      '--accent-primary': '#4f46e5',
+      '--accent-primary-hover': '#4338ca',
+      '--accent-light': '#e0e7ff',
+      '--accent-text': '#3730a3'
+    },
+    dark: {
+      '--bg-primary': '#0b0f19',
+      '--bg-surface': '#111827',
+      '--bg-surface-elevated': '#1f2937',
+      '--bg-secondary': '#1e293b',
+      '--bg-tertiary': '#334155',
+      '--text-primary': '#f8fafc',
+      '--text-secondary': '#cbd5e1',
+      '--text-muted': '#94a3b8',
+      '--border-subtle': '#1e293b',
+      '--border-focus': '#6366f1',
+      '--accent-primary': '#6366f1',
+      '--accent-primary-hover': '#4f46e5',
+      '--accent-light': '#1e1b4b',
+      '--accent-text': '#c7d2fe'
+    }
+  };
+
   // State
   let currentSpotlightQuote = null;
+  let currentFilteredQuotes = [];
   const activeFilters = {
     q: '',
     category: '',
@@ -22,7 +59,7 @@
 
   const btnRandom = document.getElementById('btnRandom');
   const btnCopy = document.getElementById('btnCopy');
-  const themeToggle = document.getElementById('themeToggle');
+  const themeToggleCheckbox = document.getElementById('themeToggleCheckbox');
 
   const searchInput = document.getElementById('searchInput');
   const btnClearSearch = document.getElementById('btnClearSearch');
@@ -30,6 +67,7 @@
   const authorSelect = document.getElementById('authorSelect');
   const btnResetFilters = document.getElementById('btnResetFilters');
   const btnEmptyReset = document.getElementById('btnEmptyReset');
+  const btnExportCsv = document.getElementById('btnExportCsv');
 
   const categoryPillsContainer = document.getElementById('categoryPills');
   const quotesGrid = document.getElementById('quotesGrid');
@@ -55,7 +93,7 @@
   }
 
   /* ==========================================================================
-     Theme Management
+     Theme Management (Overrides CSS Root Variables)
      ========================================================================== */
   function initTheme() {
     const savedTheme = localStorage.getItem('quotevault-theme');
@@ -65,17 +103,27 @@
   }
 
   function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
+    const root = document.documentElement;
+    const vars = THEME_ROOT_VARIABLES[theme] || THEME_ROOT_VARIABLES.light;
+
+    // Directly override CSS root variables on the root document element
+    for (const [property, value] of Object.entries(vars)) {
+      root.style.setProperty(property, value);
+    }
+
+    root.setAttribute('data-theme', theme);
     localStorage.setItem('quotevault-theme', theme);
-    if (themeToggle) {
-      themeToggle.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+
+    if (themeToggleCheckbox) {
+      themeToggleCheckbox.checked = (theme === 'dark');
     }
   }
 
-  function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme);
+  function handleThemeToggle() {
+    const isDark = themeToggleCheckbox.checked;
+    const newTheme = isDark ? 'dark' : 'light';
+    applyTheme(newTheme);
+    showToast(`Switched to ${newTheme} mode`);
   }
 
   /* ==========================================================================
@@ -87,7 +135,6 @@
       if (!res.ok) throw new Error('Failed to load categories');
       const categories = await res.json();
 
-      // Populate Select Dropdown
       categorySelect.innerHTML = '<option value="">All Categories</option>';
       categories.forEach(cat => {
         const option = document.createElement('option');
@@ -96,7 +143,6 @@
         categorySelect.appendChild(option);
       });
 
-      // Populate Quick Filter Pills
       categoryPillsContainer.innerHTML = '<button class="pill-filter active" data-category="">All</button>';
       categories.forEach(cat => {
         const pill = document.createElement('button');
@@ -138,7 +184,6 @@
       const res = await fetch(url);
 
       if (res.status === 404) {
-        // Fallback to any random quote if filters yielded 0
         const fallbackRes = await fetch('/api/quotes/random');
         const quote = await fallbackRes.json();
         updateSpotlightCard(quote);
@@ -165,10 +210,12 @@
       if (!res.ok) throw new Error('Failed to search quotes');
       const data = await res.json();
 
-      renderQuotesGrid(data.quotes);
+      currentFilteredQuotes = data.quotes || [];
+      renderQuotesGrid(currentFilteredQuotes);
       updateResultsHeader(data.total);
     } catch (err) {
       console.error('Error searching quotes:', err);
+      currentFilteredQuotes = [];
       quotesGrid.innerHTML = '';
       emptyState.classList.remove('hidden');
       resultsCount.textContent = 'Error loading results';
@@ -224,13 +271,13 @@
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
               </svg>
-              <span>Copy</span>
+              <span>Copy Quote</span>
             </button>
           </div>
         </div>
       `;
 
-      // Card event listeners
+      // Spotlight action
       const btnSpotlight = card.querySelector('.btn-card-spotlight');
       btnSpotlight.addEventListener('click', () => {
         updateSpotlightCard(item);
@@ -238,6 +285,7 @@
         showToast('Quote set to spotlight!');
       });
 
+      // Individual Copy to Clipboard action
       const btnCardCopy = card.querySelector('.btn-card-copy');
       btnCardCopy.addEventListener('click', () => {
         copyQuoteText(item);
@@ -266,7 +314,6 @@
     navigator.clipboard.writeText(textToCopy)
       .then(() => showToast('Quote copied to clipboard!'))
       .catch(() => {
-        // Fallback for older browsers
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
         document.body.appendChild(textarea);
@@ -275,6 +322,34 @@
         document.body.removeChild(textarea);
         showToast('Quote copied to clipboard!');
       });
+  }
+
+  function exportToCsv() {
+    if (!currentFilteredQuotes || currentFilteredQuotes.length === 0) {
+      showToast('No quotes to export!');
+      return;
+    }
+
+    const headers = ['ID', 'Quote', 'Author', 'Category', 'Tags'];
+    const rows = currentFilteredQuotes.map(item => [
+      item.id,
+      `"${(item.quote || '').replace(/"/g, '""')}"`,
+      `"${(item.author || '').replace(/"/g, '""')}"`,
+      `"${(item.category || '').replace(/"/g, '""')}"`,
+      `"${(item.tags || []).join('; ').replace(/"/g, '""')}"`
+    ]);
+
+    const csvContent = '\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'famous_quotes.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    showToast(`Exported ${currentFilteredQuotes.length} quotes to CSV!`);
   }
 
   function showToast(message) {
@@ -345,8 +420,15 @@
       }
     });
 
-    // Theme toggle
-    themeToggle.addEventListener('click', toggleTheme);
+    // Theme toggle switch
+    if (themeToggleCheckbox) {
+      themeToggleCheckbox.addEventListener('change', handleThemeToggle);
+    }
+
+    // Export to CSV button
+    if (btnExportCsv) {
+      btnExportCsv.addEventListener('click', exportToCsv);
+    }
 
     // Search input (Debounced)
     const debouncedSearch = debounce(() => {

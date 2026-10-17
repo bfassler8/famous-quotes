@@ -140,3 +140,26 @@ def test_get_authors(client):
     assert len(authors) > 0
     total_quotes_sum = sum(auth["count"] for auth in authors)
     assert total_quotes_sum == 100
+
+
+def test_export_csv(client):
+    """Verify /api/quotes/export returns valid CSV file with all quotes."""
+    response = client.get("/api/quotes/export")
+    assert response.status_code == 200
+    assert "text/csv" in response.headers["Content-Type"]
+    assert "attachment" in response.headers["Content-Disposition"]
+    lines = response.data.decode("utf-8").strip().splitlines()
+    # 1 header line + 100 quote rows
+    assert len(lines) == 101
+    assert "ID,Quote,Author,Category,Tags" in lines[0]
+
+
+def test_export_csv_filtered(client):
+    """Verify /api/quotes/export returns filtered CSV."""
+    response = client.get("/api/quotes/export?author=Einstein")
+    assert response.status_code == 200
+    lines = response.data.decode("utf-8").strip().splitlines()
+    assert len(lines) >= 2
+    for line in lines[1:]:
+        assert "Einstein" in line
+

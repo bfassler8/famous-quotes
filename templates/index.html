@@ -28,9 +28,14 @@
       </div>
       <div class="header-actions">
         <span class="badge" id="totalQuotesBadge">100 Quotes</span>
-        <button id="themeToggle" class="btn-icon" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">
-          <span class="theme-icon">🌙</span>
-        </button>
+        <div class="theme-switch-wrapper" title="Toggle dark / light mode">
+          <span class="theme-switch-icon">☀️</span>
+          <label class="theme-switch" for="themeToggleCheckbox">
+            <input type="checkbox" id="themeToggleCheckbox" aria-label="Toggle dark / light mode">
+            <span class="theme-slider"></span>
+          </label>
+          <span class="theme-switch-icon">🌙</span>
+        </div>
       </div>
     </header>
 
@@ -116,8 +121,18 @@
     <!-- Quotes Results Section -->
     <section class="results-section">
       <div class="results-header">
-        <h2 class="results-title" id="resultsTitle">Explore Quotes</h2>
-        <span class="results-count" id="resultsCount">Loading quotes...</span>
+        <div class="results-heading-group">
+          <h2 class="results-title" id="resultsTitle">Explore Quotes</h2>
+          <span class="results-count" id="resultsCount">Loading quotes...</span>
+        </div>
+        <button id="btnExportCsv" class="btn btn-secondary btn-export" title="Export current quotes to CSV">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Export to CSV</span>
+        </button>
       </div>
 
       <div class="quotes-grid" id="quotesGrid">

@@ -8,9 +8,10 @@ A clean, modern web application built with **Python Flask**, **Vanilla JavaScrip
 - **Author Search**: Search or filter quotes by any author name.
 - **Category Explorer**: Filter by category using quick interactive pill badges or dropdown select.
 - **Full-Text Search**: Real-time debounced keyword search matching quotes, authors, or topics.
-- **Copy to Clipboard**: One-click quote copying with toast notification confirmation.
+- **Copy to Clipboard on Every Quote**: One-click copying available directly on each quote card in the grid as well as the hero spotlight card, with toast confirmation.
+- **Export to CSV**: Export currently filtered or all quotes to a `.csv` file with a single click.
+- **Theme Toggle Switch**: Seamlessly switch between Dark and Light mode using an animated toggle switch in the header that directly overrides CSS root variables.
 - **Spotlight Any Quote**: Click "Spotlight" on any quote card in search results to feature it in the hero spotlight.
-- **Theme Switcher**: Dark mode and light mode toggle with system preference detection and local storage persistence.
 - **Keyboard Shortcut**: Press `Spacebar` anytime to fetch a new random quote.
 - **Zero NPM / Frontend Dependencies**: Pure vanilla JavaScript with native Fetch API.
 
@@ -24,14 +25,14 @@ famous-quotes/
 │   └── quotes.json        # Curated dataset of 100 quotes
 ├── static/
 │   ├── css/
-│   │   └── style.css      # Modern responsive styling and animations
+│   │   └── style.css      # Modern responsive styling, theme variables, and animations
 │   └── js/
-│       └── app.js         # Plain vanilla JS application logic
+│       └── app.js         # Plain vanilla JS application logic (Theme, CSV export, Fetch)
 ├── templates/
-│   └── index.html         # Semantic HTML5 single-page application
+│   └── index.html         # Semantic HTML5 single-page application with toggle switch
 ├── tests/
 │   ├── __init__.py
-│   └── test_app.py        # Automated test suite (pytest)
+│   └── test_app.py        # Automated test suite (15 pytest tests)
 ├── requirements.txt       # Dependencies (Flask, pytest)
 ├── run.bat                # Windows launch script
 └── README.md
@@ -60,6 +61,7 @@ Visit [http://127.0.0.1:5000](http://127.0.0.1:5000)
 | `/` | `GET` | Main Web Application UI |
 | `/api/quotes/random` | `GET` | Returns a random quote. Supports `?category=` and `?author=` query params |
 | `/api/quotes` | `GET` | Returns quotes with optional `?q=`, `?category=`, and `?author=` filters |
+| `/api/quotes/export` | `GET` | Returns filtered quotes as a downloadable CSV file (`text/csv`) |
 | `/api/categories` | `GET` | Returns list of categories with quote counts |
 | `/api/authors` | `GET` | Returns list of authors with quote counts |
 
